@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example page with HTML5 !</title> <!--Name of the page in your browser-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--Encoding type of the page-->
+	<link rel="stylesheet" type="text/css" href="design.css" /> <!--Link to the stylesheet-->
+	
+	<!--Javascript functions to properly drag and drop the item-->
+	<script type="text/javascript">
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+
+		function drag(ev)
+		{
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+
+<body>
+	<h1> Here is some basic HTML4 features !</h1> <br>
+	
+	<article>
+		<h3>Here is a list example:</h3>
+		<ol> <!--List of multiple items-->
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ol>
+	</article> <br> <br>
+	
+	<article>
+		<h3>Here is a UCB logo with the link to the Wikipedia page:</h3>
+		<!--UCB logo linked with the wikipedia article-->
+		<a href="http://en.wikipedia.org/wiki/University_of_California,_Berkeley"><img src="http://upload.wikimedia.org/wikipedia/en/thumb/c/ce/University_of_California_Seal.svg/200px-University_of_California_Seal.svg.png" alt="Berkeley Wiki"></a>
+	</article> <br> <br>
+
+	<article>
+		<h3>Here is an example paragraph:</h3>
+		<!--An example of paragraph using a "Lorem Ipsum" generator-->
+		<p>Lorem ipsum dolor sit amet, ea sed tollit munere eloquentiam, ne vide consequat duo. Sed viderer honestatis ad, ad saperet civibus nostrum vix. Sea no prompta intellegebat consequuntur, detracto mnesarchum nam ea. Ad quod munere vix. Offendit appareat voluptaria mel et, rebum illum consequat has ut.
+		Ne mei habeo eruditi rationibus, impetus corpora phaedrum duo in. Te minim molestie vis, ea cibo noster qui, et eum dolores blandit. Ignota meliore an eum, no mei probo convenire reformidans. Te eius magna eum. Insolens similique quo ut, tacimates intellegebat et vim, nam no ipsum cetero accusata.
+		Omnium salutatus ut nec. Mutat adolescens temporibus eu cum. Case quas has ad. At wisi dicat apeirian pri, vel veniam placerat definiebas cu.
+		Ut sale perfecto sententiae eam, dissentias voluptatibus ne has. Eam corpora commune te, ad sed euismod nusquam, nec in officiis delicatissimi. Pro ut omnium accommodare. Sea ea dolores convenire assueverit, cu albucius accusata iracundia mei. Eu usu munere vocibus pertinax. Indoctum gubergren expetendis id sea, primis latine repudiandae nam at, saperet invenire expetendis cu vel.
+		Eu erat diceret vel, iusto legendos est ut. Eu labore nusquam perfecto his, perpetua principes appellantur sit in. Vim eros omittantur deterruisset ei. Ad sed atomorum euripidis, possim discere vulputate in sit, mea autem reformidans an. An eam modo vivendum intellegebat.</p>
+	</article> <br> <br>
+	
+	<article>
+		<h3>Here are text properties:</h3> <!--Text properties-->
+		<em>Emphasized text</em> <br>
+		<strong>Strong text</strong> <br>
+		<cite>Citation</cite>
+	</article> <br> <br>
+
+	<article>
+		<h3>Here is my table:</h3> <!--Table example-->
+		<table border="1">
+			<tr>
+				<th>Month</th>
+				<th>Savings</th>
+			</tr>
+			<tr>
+				<td>January</td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>$150</td>
+			</tr>
+			<tr>
+				<td>March</td>
+				<td>$180</td>
+			</tr>
+		</table> 
+	</article> <br> <br>
+	
+	<article>
+		<h3>Here is a basic form:</h3>
+		<form> <!--Basic form with several fields-->
+			<fieldset>
+				<legend>Personal information</legend>
+				Name: <input type="text" /> <br>
+				Email: <input type="text" /> <br>
+				Date of birth: <input type="text" />
+			</fieldset>
+		</form>
+	</article> <br> <br>
+
+	<h1>Then some HTML5 features !</h1>
+	
+	<article>
+		<h3>Here is a video from Youtube:</h3>	
+		<object id="object1" type="type/subtype"> <!--"object" tag with an "embed" tag to include a youtube video in this page-->
+			<param name="movie" value="http://www.youtube.com/v/Vpg9yizPP_g?version=3&amp;feature=player_detailpage">
+			<param name="allowFullScreen" value="true">
+			<param name="allowScriptAccess" value="always">
+			<embed src="http://www.youtube.com/v/Vpg9yizPP_g?version=3&amp;feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360">
+		</object>
+	</article> <br> <br>
+
+	<article>
+		<h3>Here is a "Click-to-show/Click-to-hide function:</h3>
+		<details> <!--Click to show or to hide content - Only work with Chrome web browser-->
+			<summary>Click to make it appear (Only work with Chrome web browser)</summary>
+			<p> - HELLO WORD - </p>
+			<p>Click again to hide</p>
+		</details>
+	</article> <br> <br>
+
+	<article>
+		<h3>Progess bar (doesn't work with IE):</h3>
+		<progress value="80" max="100"></progress> <span>80%</span> <br> <!--Progress bar which doesn't work with Internet Explorer web browser-->
+		<progress value="20" max="100"></progress> <span>20%</span> <br>
+		<progress value="50" max="100"></progress> <span>50%</span>
+	</article> <br> <br>
+
+	<article>
+		<h3>Please drag the UCB logo in the square:</h3>
+
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <br> <!--Drag and drop function using the upper Javascript in "head" tag-->
+		<img id="drag1" src="http://upload.wikimedia.org/wikipedia/en/thumb/c/ce/University_of_California_Seal.svg/200px-University_of_California_Seal.svg.png" draggable="true" ondragstart="drag(event)" alt="Berkeley logo"/> <br>
+	</article> <br> <br>
+
+	<article>
+		<h3>Here is a draw function with HTML5:</h3>
+		<svg id="svg1" xmlns="http://www.w3.org/2000/svg" version="1.1" height="200"> <!--"svg" tag with "polygon" tag to draw in HTML5-->
+			<polygon points="100,10 40,180 190,60 10,60 160,180"/>
+		</svg>
+	</article> <br> <br>
+		
+	<article>	
+		<h3>Here is a form where you can only enter a valid (foo@foo.foo) email address:</h3>
+		<form action="index.html">
+			E-mail (Doesn't work with IE): <input type="email" name="usremail" /> <br> <!--"input" tag with type email - Users can only enter a syntaxic valid email-->
+			<input type="submit" />
+		</form>	
+	</article> <br> <br>
+	
+</body>
+
+</html>

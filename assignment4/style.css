@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+ 
+body
+{
+	background-color: #152535;
+	padding: 0px;
+	margin: 0px;
+	font-family:Verdana, Arial;
+	color: white;
+	position: relative;
+	top: -20px;
+}
+
+#title
+{
+	font-size: 40px;
+}
+
+#title2
+{
+	font-size: 32px;
+}
+
+#header
+ {
+	text-align: center;
+	width: 100%;
+	background-color: #121726;
+	margin: 0px;
+}
+
+#tags
+{
+	height: auto;
+	width: 85%;
+	margin: 0 auto;
+}
+
+#logo
+{
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	vertical-align: middle;
+}
+
+#firstrow, #secondrow
+{
+	width: 85%;
+	margin: 0 auto;
+}
+
+p
+{
+	margin-left: 10%;
+}
+
+span
+{
+	border: solid 1px white;
+	padding: 7px;
+	border-radius: 10px;
+	background-color: #455565;
+}
+
+span:hover
+{
+	cursor: pointer;
+}
+
+.pics, .soccer, .swimming, .judo, .village, .tony, .michael, .french
+{
+	width: 85%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding: 40px;
+	background-color: white;
+	border: solid 1px grey;
+	border-radius: 10px;
+}
+
+#olympics, #london, #olympictorch
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}

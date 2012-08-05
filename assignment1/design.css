@@ -1,0 +1,36 @@
+#div1 
+{
+	width:200px;
+	height:200px;
+	padding:10px;
+	border:1px solid #aaaaaa;
+	}
+	
+h1
+{
+	text-align:center;
+}
+
+#object1
+{
+	height: 390px; 
+	width: 640px;
+}
+
+#svg1
+{
+	fill:lime;
+	stroke:purple;
+	stroke-width:5;
+	fill-rule:evenodd;
+}
+article
+{
+	border-style: inset;
+	padding: 15px;
+}
+
+body
+{
+	font-family: Helvetica, Arial, Sans-Serif;
+}

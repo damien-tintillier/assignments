@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>jQuery Exercises</title>
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript">
+	// Display an Alert window when clicking button
+		$(document).ready(function(){
+		$("#button").click(function(){
+		alert("Button was clicked.");
+		});
+		});
+	</script>
+	<script type="text/javascript">
+	// Hide/Show an element
+	jQuery(function() {
+		$("#hide").click(function () {
+		  $("#hidebox").hide("slow");
+		});
+		$("#show").click(function () {
+		  $("#hidebox").show("slow");
+		});
+	});
+	</script>
+	 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript"> 
+	// write a script that slides the ORANGE box when "Click to slide box" is clicked
+	jQuery(function() {
+		$("#clickslide").click(function () {
+		  $("#slider").slideToggle("fast");
+		});
+	});
+	</script>
+	 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	// write a script that fades the MAROON box when the THE BOX is clicked
+	jQuery(function() {
+		$("#faderback").fadeOut(0);
+		$("#fader").click(function () {
+		  $("#fader").fadeOut("slow");
+		  $("#faderback").fadeIn("slow");
+		});
+		$("#faderback").click(function () {
+		  $("#faderback").fadeOut("slow");
+		  $("#fader").fadeIn("slow");
+		});
+	});
+	</script>
+	 
+	
+	<script type="text/javascript"> 
+	// write a script that animates the BEIGE box to 300X300 PX then to 100X100px when the button "Click me, I'm a button" is clicked
+	jQuery(function() {
+		$("#resize").click(function () {
+		  $("#animator").animate({height:'300px', width:'300px'}, 500);
+		  $("#animator").animate({height:'100px', width:'100px'}, 500);
+		  $("#animator").animate({height:'200px', width:'200px'}, 500);
+		});
+	});
+	</script> 
+	 
+	<script type="text/javascript">
+	// write a script that makes the picture of the baby girrafe draggable. So that you can drag the girraffe all around the page
+	jQuery(function() {
+		  $("#draggable").draggable();
+		});
+	</script>
+	 
+	<script type="text/javascript">
+	// write a script here so that when you hover on each element (milk, bread, chips, socks) three red asterisks appear beside the element and then disappears when you remove the cursor
+	jQuery(function() { 
+	 $(".asterisk").hover(
+            function () {
+                $(this).append($('<span>***</span>'));
+            },
+            function () {
+                $(this).find("span:last").remove();
+            }
+            );
+		});
+	</script>
+	 
+	<link href="jquery.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+ 
+<body>
+	<div id="header">
+		<br />
+		<h1 id="title">Let see some web features using</h1>
+		<img id="logo" src="jquery-logo1.png" alt="jquery logo"/>
+	</div>
+	
+	<div id="firstrow">
+		<div id="alert">
+			<span class="normaltext">Click the button to see the "alert" pop-up: </span>
+			<button id="button">Click Me</button>
+		</div>
+	</div>
+	
+	<div id="secondrow">
+		<div id="hideshow">
+			<span class="normaltext">Click below to Hide/Show the box:</span> <br /> <br />
+			<div id="hide"> Hide    </div>
+			<div id="show"> Show </div>
+			<div id="hidebox">
+				<p>I'm a ghost.</p>
+			</div>
+		</div>
+		
+		<div id="slide">
+			<div id="clickslide">
+				<span class="normaltext"> Click to slide box </span>
+			</div>
+			<div id="slider">
+				<p> Oh hey, I slid. </p>
+			</div>
+		</div>
+		
+		<div id="fade">
+			<span class="normaltext">This box will fade into oblivion if you click on it...</span> <br /><br />
+			<button id="faderback">Bring brown box back</button>
+			<div id="fader">
+			</div>
+		</div>	 
+	</div>
+	
+	<div id="thirdrow">
+		<div id="size">
+			<button id="resize">Resize this green box!</button>
+			 
+			<div id="animator">
+			</div>
+		</div>
+
+		<div id="drag">
+			<h2>Please drag me!</h2>
+			<div id="draggable">
+				<img src="logo.jpeg" alt="logo" border="0"/> 
+			</div>
+		</div>
+		
+		<div id="list">
+			<span class="normaltext"> Overfly the list's elements to see asterisks:</span> <br />
+			<div id="ulcontainer">
+				<ul>
+					<li class="asterisk">Milk</li>
+					<li class="asterisk">Bread</li>
+					<li class="asterisk">Chips</li>
+					<li class="asterisk">Socks</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
